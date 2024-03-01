@@ -12,3 +12,139 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+
+/* Все для анимации иконки сердца */
+.like-icon.is-liked .heart { 
+    animation: scale-heart 0.3s ease-in 0.1s 1 alternate; 
+  } 
+   
+  .like-icon.is-liked .flicker { 
+    animation: flicker-heart 0.3s ease-in 0.3s 1 alternate; 
+  }
+
+  /* Анимации для сердечка в карточках */ 
+@keyframes arrow-animation { 
+    from { 
+      left: -20px; 
+    } 
+    to { 
+      left: -16px; 
+    } 
+  } 
+   
+  /* Анимация для увелечения размера */ 
+  @keyframes scale-heart { 
+    from { 
+      scale: 1; 
+    } 
+    to { 
+      scale: 1.5; 
+    } 
+  } 
+   
+  /* Анимация для звездочек */ 
+  @keyframes flicker-heart { 
+    from { 
+      opacity: 0; 
+    } 
+    to { 
+      opacity: 1; 
+    } 
+  } 
+   
+  .theme-menu__button:hover { 
+    opacity: 0.6; 
+    transition: opacity 0.3s ease; 
+  } 
+   
+  .theme-menu__button::after { 
+    content: "";
+    display: block; 
+    border-block-end: 2px solid var(--accent-color, #000); 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+    transform-origin: 0 50%; 
+  } 
+   
+  .theme-menu__button:focus-visible::after { 
+    transform: scaleX(1); 
+  } 
+   
+  .theme-menu__button:focus { 
+    outline: none; 
+    opacity: 0.6; 
+  } 
+   
+  .card__icon-button:focus { 
+    outline: none; 
+  } 
+   
+  .card__icon-button:focus-visible { 
+    outline: 2px solid var(--stroke-color); 
+  } 
+   
+  .button:hover::before { 
+    transform: translateX(0); 
+  } 
+   
+  .button:focus { 
+    outline: none; 
+  } 
+   
+  .button:focus-visible { 
+    box-shadow: 2px 2px 0px 0px var(--accent-color); 
+  } 
+   
+  .like-icon:hover .heart-body { 
+    fill: var(--accent-color); 
+  } 
+   
+  .like-icon:active .heart-body { 
+    fill: var(--heart-color); 
+  } 
+   
+  .like-icon.is-liked .heart-body { 
+    fill: var(--heart-color); 
+  } 
+   
+  .like-icon .heart-center { 
+    fill: var(--background-color); 
+    transition: fill 0.3s 0.05s; 
+  } 
+   
+  .like-icon:hover .heart-center { 
+    fill: var(--accent-color); 
+  } 
+   
+  .like-icon:active .heart-center { 
+    fill: var(--heart-color); 
+  } 
+   
+  .like-icon.is-liked .heart-center { 
+    fill: var(--heart-color); 
+  } 
+   
+  .like-icon .outline { 
+    fill: var(--accent-color); 
+  } 
+   
+  .like-icon.is-liked .outline { 
+    fill: var(--heart-color); 
+  } 
+   
+  .like-icon .flicker { 
+    opacity: 0; 
+    fill: var(--heart-color); 
+  }
+
+/* Анимация стрелочки в меню */
+@keyframes arrowAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(4px);
+    }
+}

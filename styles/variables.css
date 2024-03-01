@@ -1,1 +1,36 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --accent-color: #000000;
+    --background-color:   #FFFFFF;
+    --gradient-color: #d3d3d3;
+    --heart-color: #ff0000;
+    --button-text-color: var(--background-color);
+    --background-image: 
+    repeating-linear-gradient(
+        to right,
+        var(--gradient-color) 0px,
+        var(--gradient-color) 2px,
+        transparent 2px,
+        transparent 4px
+    ),
+    repeating-linear-gradient(
+        to bottom,
+        var(--gradient-color) 0px,
+        var(--gradient-color) 2px,
+        transparent 2px,
+        transparent 4px
+    ),
+    linear-gradient(
+        to bottom,
+        #e7e7e7 0.01%,
+        #1a1a1a
+    );
+
+    --main-font: 'Inter Variable';
+    --accent-font: 'Press Start 2P';
+    --fz-logo: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --fz-subtitle: clamp(14px, 2.5vw, 23px);
+    --card-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+    --bold-text: 785;
+    --regular-text: 400;
+}
