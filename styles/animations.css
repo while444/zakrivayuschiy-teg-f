@@ -100,23 +100,26 @@
     transition: transform 0.3s ease; 
     transform-origin: 0 50%; 
   } 
-   
+
+
   .theme-menu__button:focus-visible::after { 
     transform: scaleX(1); 
   } 
    
-  .theme-menu__button:focus { 
+  .theme-menu__button:focus-visible { 
     outline: none; 
     opacity: 0.6; 
   } 
    
-  .card__icon-button:focus { 
-    outline: none; 
-  } 
-   
   .card__icon-button:focus-visible { 
+    outline: none; 
+    border-color: var(--accent-color);
     outline: 2px solid var(--stroke-color); 
   } 
+   
+  /* .card__icon-button:focus-visible { 
+    outline: 2px solid var(--stroke-color); 
+  }  */
    
   .button:hover::before { 
     transform: translateX(0); 
@@ -126,7 +129,7 @@
     outline: none; 
   } 
    
-  .button:focus { 
+  .button:focus-visible { 
     box-shadow: 2px 2px 0px 0px var(--accent-color); 
   } 
    
