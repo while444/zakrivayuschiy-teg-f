@@ -17,7 +17,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  padding-top: 102px;
+  padding-top: 84px;
   background-image: var(--background-image);
   background-size: cover;
   background-position: center;
@@ -25,7 +25,7 @@
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 103px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -33,48 +33,52 @@ main {
 
 .header {
   max-width: 696px;
-  min-height: 368px;
   width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 136px 0 25px 0;
+  padding: 136px 0 0px 0;
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
 }
 
 .header__title {
-  font-family: 'Press Start 2P';
+  font-family: var(--accent-font, 'fantasy');
   font-size: var(--fz-logo);
   color: var(--accent-color);
 }
 
 .header__sub-title {
-  font-family: 'Press Start 2P';
+  font-family: var(--accent-font, 'fantasy');
   font-size: var(--fz-subtitle);
-  margin-top: 25px;
+  margin-top: 19px;
+  text-transform: uppercase;
   color: var(--accent-color);
 }
 
 .theme-menu {
-  margin-top: 25px;
+  margin-top: 23px;
   color: var(--accent-color);
+  padding-bottom: 19px;
 }
 
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 9px;
+  text-align: left;
+  margin-left: 19px;
 }
 
 .theme-menu__button {
-  font-family: var(--accent-font, serif);
+  font-family: var(--accent-font, 'fantasy');
   position: relative;
   font-size: 14px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .theme-menu__button[disabled] {
@@ -101,7 +105,6 @@ main {
   flex-direction: column;
   background-color: var(--background-color);
   font-family: var(--main-font, serif);
-  /* padding-bottom: 25px; */
   margin: 0 auto;
 }
 
@@ -122,8 +125,7 @@ main {
   top: 25px;
   right: 10px;
   z-index: 1;
-  font-family: var(--accent-font);
-  color: var(--accent-color);
+  font-family: var(--accent-font, 'fantasy');  color: var(--accent-color);
   text-shadow: 1px 0 1px var(--background-color), -1px 0 1px var(--background-color);
   opacity: 0.5;
 }
@@ -133,6 +135,8 @@ main {
   width: 100%;
   object-fit: cover;
   border: 2px solid var(--accent-color);
+  border-top: none;
+  border-bottom: none;
 }
 
 .card__text-box {
@@ -143,17 +147,18 @@ main {
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: var(--regular-text, 400);
-  margin: 25px 25px 0 25px;
+  margin: 32px 25px 0 25px;
 }
 
 .card__button-container {
   display: flex;
   align-items: center;
   justify-content: end;
+  gap: 5px;
   margin: 25px 0 0 0;
   padding-bottom: 25px; 
   border-top: none;
-  padding-right: 25px;
+  padding-right: 24px;
 }
 
 .card__wrapper-bottom {
@@ -171,14 +176,12 @@ border: 2px solid var(--accent-color);
 
 .button__text {
   color: var(--button-text-color);
-  font-family: var(--accent-font);
-  transition: 0.5s linear;
+  font-family: var(--accent-font, 'fantasy');  transition: 0.5s linear;
   mix-blend-mode: difference;
 }
 
 .button {
-  font-family: var(--accent-font);
-  width: 130px;
+  font-family: var(--accent-font, 'fantasy');  width: 130px;
   height: 38px;
   font-size: 14px;
   position: relative;
@@ -204,41 +207,6 @@ border: 2px solid var(--accent-color);
   transition: transform 0.5s ease-in-out;
 }
 
-/* heart
-======================== */
-
-.like-icon { 
-  width: inherit; 
-  height: inherit; 
-  fill: var(--color-accent); 
-  position: relative; 
-  z-index: 1; 
-} 
- 
-.like-icon .heart { 
-  transition: fill 0.1s; 
-  transform-origin: center center; 
-} 
- 
-.like-icon .heart-body { 
-  fill: var(--color-background); 
-  transition:  
-  fill 0.3s linear; 
-} 
- 
-.card__icon-button { 
-  padding: 0; 
-  width: 39px; 
-  height: 36px; 
-  background: transparent; 
-  border: none; 
-  cursor: pointer; 
-}
-
-/* heart
-======================== */
-
-
 /* dialog
 ======================== */ 
 .save-button { 
@@ -256,8 +224,7 @@ border: 2px solid var(--accent-color);
 } 
  
 .dialog { 
-  font-family: var(--accent-font); 
-  font-size: 14px; 
+  font-family: var(--accent-font, 'fantasy');  font-size: 14px; 
   padding: 32px 38px; 
   color: var(--accent-color); 
   background: var(--background-color); 
@@ -311,3 +278,45 @@ border: 2px solid var(--accent-color);
 
 /* dialog
 ======================== */
+
+
+@media (width <= 376px) {
+  .header {
+    padding-top: 117px;
+  }
+
+  main {
+    gap: 48px;
+  }
+
+  .card__text-box {
+    margin-right: 29px;
+    
+  }
+  
+  .card__image-watermark  {
+    top: 28px;
+    right: 6px;
+  }
+
+  .card__button-container {
+    margin-top: 19px;
+  }
+
+  .save-button {
+    flex-direction: column;
+    min-width: 315px;
+    min-height: 84px;
+    padding-left: 6px;
+  }
+
+  .floppy {
+    margin-top: 18px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .dialog .floppy {
+    margin-top: 0;
+  }
+}
