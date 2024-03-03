@@ -19,10 +19,10 @@
 
 .like-icon { 
     width: inherit; 
-    height: inherit; 
-    fill: var(--color-accent); 
+    height: inherit;  
     position: relative; 
     z-index: 1; 
+    margin-top: 3px;
   } 
    
   .like-icon .heart { 
@@ -114,7 +114,7 @@
   .card__icon-button:focus-visible { 
     outline: none; 
     border-color: var(--accent-color);
-    outline: 2px solid var(--stroke-color); 
+    outline: 2px solid var(--accent-color); 
   } 
    
   /* .card__icon-button:focus-visible { 
