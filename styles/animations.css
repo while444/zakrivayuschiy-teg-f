@@ -23,17 +23,49 @@
     position: relative; 
     z-index: 1; 
     margin-top: 3px;
-  } 
+  }
+
+.heart-center{
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
+}
+
+.heart-body {
+  fill: transparent;
+  transition: fill 0.3s 0 linear;
+}
+
+.like-icon:hover .heart-center { 
+  fill: var(--accent-color); 
+  transition: fill 0.3s  linear;
+} 
+
+.like-icon:hover .heart-body { 
+  fill: var(--accent-color); 
+  transition: fill 0.3s 0.05s linear;
+} 
+
+/* Все для анимации иконки сердца */
+.like-icon.is-liked .heart { 
+  animation: scale-heart 0.3s ease-in 0.1s 1 alternate; 
+} 
+ 
+.like-icon.is-liked .flicker { 
+  animation: flicker-heart 0.3s ease-in 0.3s 1 alternate; 
+}
+
+
+
    
   .like-icon .heart { 
-    transition: fill 0.1s; 
-    transform-origin: center center; 
+    /* transition: fill 0.1s; 
+    transform-origin: center center;  */
   } 
    
   .like-icon .heart-body { 
     fill: var(--color-background); 
-    transition:  
-    fill 0.3s linear; 
+    /* transition: fill 0.3s linear;  */
+    /* transition: fill 0.3s 0.05s linear;  */
   } 
    
   .card__icon-button { 
@@ -47,15 +79,6 @@
   
   /* heart
   ======================== */
-
-/* Все для анимации иконки сердца */
-.like-icon.is-liked .heart { 
-    animation: scale-heart 0.3s ease-in 0.1s 1 alternate; 
-  } 
-   
-  .like-icon.is-liked .flicker { 
-    animation: flicker-heart 0.3s ease-in 0.3s 1 alternate; 
-  }
 
   /* Анимации для сердечка в карточках */ 
 @keyframes arrow-animation { 
@@ -133,9 +156,9 @@
     box-shadow: 2px 2px 0px 0px var(--accent-color); 
   } 
    
-  .like-icon:hover .heart-body { 
+  /* .like-icon:hover .heart-body { 
     fill: var(--accent-color); 
-  } 
+  }  */
    
   .like-icon:active .heart-body { 
     fill: var(--heart-color); 
@@ -147,12 +170,12 @@
    
   .like-icon .heart-center { 
     fill: var(--background-color); 
-    transition: fill 0.3s 0.05s; 
+    transition: fill 0.3s linear; 
   } 
    
-  .like-icon:hover .heart-center { 
+  /* .like-icon:hover .heart-center { 
     fill: var(--accent-color); 
-  } 
+  }  */
    
   .like-icon:active .heart-center { 
     fill: var(--heart-color); 
